@@ -27,6 +27,18 @@
                 display: none !important;
             }
             
+            /* Hide browser header and footer when printing */
+            @page {
+                margin: 0;
+                size: A4;
+            }
+            
+            /* Hide browser's default header/footer */
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
             button[id^="toggle-"] {
                 display: none !important;
             }
@@ -75,22 +87,7 @@
     <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-10 lg:p-12">
         
         <!-- Header Section -->
-        <header class="flex flex-col md:flex-row items-center md:justify-between border-b pb-6 mb-6">
-            <div class="text-center md:text-left">
-                <p class="text-sm text-gray-500 mb-2">CURRICULUM VITAE</p>
-                <h1 class="text-4xl font-bold text-gray-900">Michał Kozłowski</h1>
-                <p class="text-lg text-gray-600 mt-2">Fullstack Developer, Node.js, Angular</p>
-                <!-- Image section updated here -->
-                <div class="mt-4 md:mt-6">
-                    <img src="IMG_4584.jpg" alt="Zdjęcie profilowe Michała Kozłowskiego" class="w-40 h-40 rounded-full object-cover object-top border-4 border-white shadow-lg mx-auto md:mx-0">
-                </div>
-            </div>
-            <div class="mt-4 md:mt-0 text-center md:text-right text-sm text-gray-500">
-                <p>E-mail: michalgtn@gmail.com</p>
-                <p>Telefon: +48 600 316 151</p>
-                <p>Miejscowość: Opole, Polska</p>
-            </div>
-        </header>
+        usun
 
         <!-- Summary -->
         <section class="mb-8">
