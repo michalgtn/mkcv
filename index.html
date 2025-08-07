@@ -80,32 +80,104 @@
         .summary-text {
             text-indent: 2rem;
         }
+        
+        /* Language selector styles */
+        .lang-btn {
+            color: #6b7280;
+            background-color: transparent;
+        }
+        
+        .lang-btn.active {
+            color: #1f2937;
+            background-color: #f3f4f6;
+        }
+        
+        .lang-btn:hover {
+            background-color: #f9fafb;
+        }
+        
+        /* Hide elements based on language */
+        .lang-pl {
+            display: block;
+        }
+        
+        .lang-en {
+            display: none;
+        }
+        
+        .lang-en.active {
+            display: block;
+        }
+        
+        .lang-pl.active {
+            display: block;
+        }
     </style>
 </head>
 <body class="p-8 md:p-12 lg:p-16">
 
+    <!-- Language Selector -->
+    <div class="max-w-4xl mx-auto mb-4 flex justify-end">
+        <div class="bg-white rounded-lg shadow-md px-3 py-2 flex space-x-2">
+            <button id="lang-pl" class="lang-btn active px-2 py-1 rounded text-sm font-medium transition-colors" data-lang="pl">PL</button>
+            <span class="text-gray-400">|</span>
+            <button id="lang-en" class="lang-btn px-2 py-1 rounded text-sm font-medium transition-colors" data-lang="en">EN</button>
+        </div>
+    </div>
+
     <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-10 lg:p-12">
         
         <!-- Header Section -->
-        usun
+        <!-- Header Section -->
+        <header class="flex flex-col md:flex-row items-center md:justify-between border-b pb-6 mb-6">
+            <div class="text-center md:text-left">
+                <p class="text-sm text-gray-500 mb-2 lang-pl">CURRICULUM VITAE</p>
+                <p class="text-sm text-gray-500 mb-2 lang-en" style="display: none;">CURRICULUM VITAE</p>
+                <h1 class="text-4xl font-bold text-gray-900">Michał Kozłowski</h1>
+                <p class="text-lg text-gray-600 mt-2 lang-pl">Fullstack Developer, Node.js, Angular</p>
+                <p class="text-lg text-gray-600 mt-2 lang-en" style="display: none;">Fullstack Developer, Node.js, Angular</p>
+                <!-- Image section updated here -->
+                <div class="mt-4 md:mt-6">
+                    <img src="IMG_4584.jpg" alt="Zdjęcie profilowe Michała Kozłowskiego" class="w-40 h-40 rounded-full object-cover object-top border-4 border-white shadow-lg mx-auto md:mx-0">
+                </div>
+            </div>
+            <div class="mt-4 md:mt-0 text-center md:text-right text-sm text-gray-500">
+                <p>E-mail: michalgtn@gmail.com</p>
+                <p class="lang-pl">Telefon: +48 600 316 151</p>
+                <p class="lang-en" style="display: none;">Phone: +48 600 316 151</p>
+                <p class="lang-pl">Miejscowość: Opole, Polska</p>
+                <p class="lang-en" style="display: none;">Location: Opole, Poland</p>
+            </div>
+        </header>
 
         <!-- Summary -->
         <section class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">O mnie</h2>
-            <p class="text-gray-700 leading-relaxed text-justify summary-text">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-pl">O mnie</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-en" style="display: none;">About Me</h2>
+            <p class="text-gray-700 leading-relaxed text-justify summary-text lang-pl">
                 Specjalizuję się w rozwiązywaniu złożonych problemów technicznych z wykorzystaniem najnowszych technologii webowych. Posiadam ponad 20-letnie doświadczenie w branży IT, w tym 15 lat prowadzenia własnych przedsiębiorstw, co wykształciło we mnie umiejętność strategicznego myślenia i efektywnego zarządzania projektami.
             </p>
-            <p class="text-gray-700 leading-relaxed text-justify mt-2 summary-text">
+            <p class="text-gray-700 leading-relaxed text-justify summary-text lang-en" style="display: none;">
+                I specialize in solving complex technical problems using the latest web technologies. I have over 20 years of experience in the IT industry, including 15 years of running my own businesses, which has developed my strategic thinking and efficient project management skills.
+            </p>
+            <p class="text-gray-700 leading-relaxed text-justify mt-2 summary-text lang-pl">
                 Moje kluczowe kompetencje obejmują pełny stack technologiczny z naciskiem na Angular, Node.js oraz związane z nimi ekosystemy. Wyróżnia mnie zdolność do analizy problemów z perspektywy biznesowej i technicznej, co pozwala na tworzenie rozwiązań nie tylko funkcjonalnych, ale także skalowalnych i łatwych w utrzymaniu.
             </p>
-            <p class="text-gray-700 leading-relaxed text-justify mt-2 summary-text">
+            <p class="text-gray-700 leading-relaxed text-justify mt-2 summary-text lang-en" style="display: none;">
+                My key competencies include a full technological stack with emphasis on Angular, Node.js and related ecosystems. I stand out for my ability to analyze problems from both business and technical perspectives, enabling me to create solutions that are not only functional but also scalable and easy to maintain.
+            </p>
+            <p class="text-gray-700 leading-relaxed text-justify mt-2 summary-text lang-pl">
                 Cechuje mnie systematyczne podejście do rozwiązywania problemów oraz determinacja w dążeniu do optymalnych rozwiązań. Doświadczenie w zarządzaniu zespołami i projektami pozwala mi skutecznie współpracować z różnymi interesariuszami i dostarczać wartość zarówno od strony technicznej, jak i biznesowej.
+            </p>
+            <p class="text-gray-700 leading-relaxed text-justify mt-2 summary-text lang-en" style="display: none;">
+                I am characterized by a systematic approach to problem-solving and determination in pursuing optimal solutions. Experience in managing teams and projects allows me to effectively collaborate with various stakeholders and deliver value from both technical and business perspectives.
             </p>
         </section>
 
         <!-- Work Experience Section -->
         <section class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Doświadczenie zawodowe</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-pl">Doświadczenie zawodowe</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-en" style="display: none;">Work Experience</h2>
 
             <!-- Job 1 - Euvic -->
             <div class="bg-gray-50 p-6 rounded-lg mb-6 border border-gray-200">
@@ -256,7 +328,8 @@
 
         <!-- Education Section -->
         <section class="border-t pt-6 mt-6">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Wykształcenie</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-pl">Wykształcenie</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-en" style="display: none;">Education</h2>
             <div class="bg-gray-50 p-6 rounded-lg mb-4 border border-gray-200">
                 <div class="flex justify-between items-start mb-2">
                     <div>
@@ -279,41 +352,55 @@
 
         <!-- Languages Section -->
         <section class="border-t pt-6 mt-6">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Języki</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-pl">Języki</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-en" style="display: none;">Languages</h2>
             <div class="bg-gray-50 p-6 rounded-lg mb-4 border border-gray-200">
-                <p class="text-gray-600">Angielski: C1</p>
-                <p class="text-gray-700 mt-2">W ciągu ostatnich lat pracy komunikowałem się głównie w języku angielskim, zarówno w formie pisemnej, jak i podczas licznych spotkań. Swobodnie wyrażam swoje myśli w tym języku.</p>
+                <p class="text-gray-600 lang-pl">Angielski: C1</p>
+                <p class="text-gray-600 lang-en" style="display: none;">English: C1</p>
+                <p class="text-gray-700 mt-2 lang-pl">W ciągu ostatnich lat pracy komunikowałem się głównie w języku angielskim, zarówno w formie pisemnej, jak i podczas licznych spotkań. Swobodnie wyrażam swoje myśli w tym języku.</p>
+                <p class="text-gray-700 mt-2 lang-en" style="display: none;">Over the past years of work, I have communicated mainly in English, both in writing and during numerous meetings. I can freely express my thoughts in this language.</p>
             </div>
         </section>
 
         <!-- Interests Section -->
         <section class="border-t pt-6 mt-6">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Zainteresowania</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-pl">Zainteresowania</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-en" style="display: none;">Interests</h2>
             
             <!-- Sports -->
             <div class="bg-gray-50 p-6 rounded-lg mb-4 border border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Sport i aktywność fizyczna</h3>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3 lang-pl">Sport i aktywność fizyczna</h3>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3 lang-en" style="display: none;">Sports and Physical Activity</h3>
                 <div class="space-y-4">
                     <div>
-                        <h4 class="font-semibold text-gray-800">Koszykówka</h4>
-                        <p class="text-gray-700">Jestem wielkim fanem koszykówki. W młodości grałem w 2 lidzie i odnosiłem pewne sukcesy. Później wybrałem pracę w IT jednak gra w kosza towrzyszyła mi przez kolejne lata. Co tydzień ze sprawdzoną grupą kolegów ( byłych zawodników ) toczyliśmy zazarte zmagania i później w piątkowe wieczory wypijalismy wspólnie piwo. Przyjaźnie zawiązane na parkiecie przeniosły się na życie prywatne. Spotkamy się wciąz regularnie z rodzinami na wspólnych wyjazdach. Kosz z racji wieku poszedł juz w odstawkę. </p>
+                        <h4 class="font-semibold text-gray-800 lang-pl">Koszykówka</h4>
+                        <h4 class="font-semibold text-gray-800 lang-en" style="display: none;">Basketball</h4>
+                        <p class="text-gray-700 lang-pl">Jestem wielkim fanem koszykówki. W młodości grałem w 2 lidze i odnosiłem pewne sukcesy. Później wybrałem pracę w IT jednak gra w kosza towrzyszyła mi przez kolejne lata. Co tydzień ze sprawdzoną grupą kolegów ( byłych zawodników ) toczyliśmy zazarte zmagania i później w piątkowe wieczory wypijalismy wspólnie piwo. Przyjaźnie zawiązane na parkiecie przeniosły się na życie prywatne. Spotkamy się wciąz regularnie z rodzinami na wspólnych wyjazdach. Kosz z racji wieku poszedł juz w odstawkę. </p>
+                        <p class="text-gray-700 lang-en" style="display: none;">I am a huge basketball fan. In my youth, I played in the 2nd league and achieved some success. Later I chose to work in IT, but basketball accompanied me for many years. Every week with a trusted group of friends (former players) we had fierce competitions and then on Friday evenings we drank beer together. Friendships formed on the court transferred to private life. We still meet regularly with families on joint trips. Basketball has been put aside due to age.</p>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-gray-800">Bieganie długodystansowe</h4>
-                        <p class="text-gray-700">Ukończyłem w zyciu dwa maratony 2017 Poznań i 2019 Wrocław. Każdy start to nie tylko wyzwanie fizyczne, ale przede wszystkim mentalne. Lubie biegać w plenerze i traktuję to jako rutynę pozwalającą mi zwolnić głowę i złapać dystans to biezących problemów. Wiele dobrych pomysłów i rozwiązań pojawiło się w trakcie wysiłku fizycznego.</p>
+                        <h4 class="font-semibold text-gray-800 lang-pl">Bieganie długodystansowe</h4>
+                        <h4 class="font-semibold text-gray-800 lang-en" style="display: none;">Long-distance Running</h4>
+                        <p class="text-gray-700 lang-pl">Ukończyłem w zyciu dwa maratony 2017 Poznań i 2019 Wrocław. Każdy start to nie tylko wyzwanie fizyczne, ale przede wszystkim mentalne. Lubie biegać w plenerze i traktuję to jako rutynę pozwalającą mi zwolnić głowę i złapać dystans to biezących problemów. Wiele dobrych pomysłów i rozwiązań pojawiło się w trakcie wysiłku fizycznego.</p>
+                        <p class="text-gray-700 lang-en" style="display: none;">I have completed two marathons in my life: 2017 Poznań and 2019 Wrocław. Each start is not only a physical challenge but above all a mental one. I like running outdoors and treat it as a routine that allows me to slow down my mind and gain distance from current problems. Many good ideas and solutions have emerged during physical exertion.</p>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-gray-800">Kolarstwo górskie</h4>
-                        <p class="text-gray-700">Weekendowe wyprawy rowerowe w góry są moją pasją. Szczególnie lubię trasy w Beskidach i Sudetach. Każda wyprawa to nie tylko test własnych możliwości, ale także okazja do podziwiania piękna przyrody i odkrywania nowych szlaków.</p>
+                        <h4 class="font-semibold text-gray-800 lang-pl">Kolarstwo górskie</h4>
+                        <h4 class="font-semibold text-gray-800 lang-en" style="display: none;">Mountain Biking</h4>
+                        <p class="text-gray-700 lang-pl">Weekendowe wyprawy rowerowe w góry są moją pasją. Szczególnie lubię trasy w Beskidach i Sudetach. Każda wyprawa to nie tylko test własnych możliwości, ale także okazja do podziwiania piękna przyrody i odkrywania nowych szlaków.</p>
+                        <p class="text-gray-700 lang-en" style="display: none;">Weekend mountain biking trips are my passion. I particularly like trails in the Beskids and Sudetes. Each expedition is not only a test of my own capabilities but also an opportunity to admire the beauty of nature and discover new trails.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Intellectual Interests -->
             <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">Literatura i historia</h3>
-                <p class="text-gray-700 mb-3">Fascynuje mnie zgłębianie historii, szczególnie analiza jak pojedyncze wydarzenia wpłynęły na rozwój całych społeczeństw. Lubię tez ksiąki sci-fi. Lubię samemu przewidywać mozliwe kierunki rozwoju naszej cywilizacji</p>
-                <p class="text-gray-700">Regularnie sięgam po literaturę historyczną i reportaże. Szczególnie cenię sobie prace Yuval Noah Harari'ego, którego książki pozwalają spojrzeć na historię z szerszej perspektywy i dostrzec wzorce kształtujące naszą teraźniejszość.</p>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3 lang-pl">Literatura i historia</h3>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3 lang-en" style="display: none;">Literature and History</h3>
+                <p class="text-gray-700 mb-3 lang-pl">Fascynuje mnie zgłębianie historii, szczególnie analiza jak pojedyncze wydarzenia wpłynęły na rozwój całych społeczeństw. Lubię tez ksiąki sci-fi. Lubię samemu przewidywać mozliwe kierunki rozwoju naszej cywilizacji</p>
+                <p class="text-gray-700 mb-3 lang-en" style="display: none;">I am fascinated by delving into history, especially analyzing how single events influenced the development of entire societies. I also like sci-fi books. I like to predict possible directions of development of our civilization myself.</p>
+                <p class="text-gray-700 lang-pl">Regularnie sięgam po literaturę historyczną i reportaże. Szczególnie cenię sobie prace Yuval Noah Harari'ego, którego książki pozwalają spojrzeć na historię z szerszej perspektywy i dostrzec wzorce kształtujące naszą teraźniejszość.</p>
+                <p class="text-gray-700 lang-en" style="display: none;">I regularly reach for historical literature and reportages. I particularly value the works of Yuval Noah Harari, whose books allow us to look at history from a broader perspective and see patterns shaping our present.</p>
             </div>
         </section>
     </div>
@@ -332,6 +419,33 @@
                 button.textContent = 'Czytaj więcej';
             }
         }
+
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const langButtons = document.querySelectorAll('.lang-btn');
+            
+            langButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const selectedLang = this.getAttribute('data-lang');
+                    
+                    // Update button states
+                    langButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide content based on language
+                    const plElements = document.querySelectorAll('.lang-pl');
+                    const enElements = document.querySelectorAll('.lang-en');
+                    
+                    if (selectedLang === 'pl') {
+                        plElements.forEach(el => el.style.display = 'block');
+                        enElements.forEach(el => el.style.display = 'none');
+                    } else {
+                        plElements.forEach(el => el.style.display = 'none');
+                        enElements.forEach(el => el.style.display = 'block');
+                    }
+                });
+            });
+        });
     </script>
 
 </body>
