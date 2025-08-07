@@ -31,6 +31,11 @@
                 overflow: visible !important;
             }
         }
+        
+        /* First line indentation for summary paragraphs */
+        .summary-text {
+            text-indent: 2rem;
+        }
     </style>
 </head>
 <body class="p-8 md:p-12 lg:p-16">
@@ -56,14 +61,15 @@
 
         <!-- Summary -->
         <section class="mb-8">
-            <p class="text-gray-700 leading-relaxed text-justify">
-                Moją kluczową mocną stroną jest zdolność do skutecznego rozwiązywania złożonych problemów technicznych, nawet pod presją czasu. Wyróżnia mnie umiejętność patrzenia na wyzwania z szerszej perspektywy, co pozwala mi wypracowywać rozwiązania nie tylko działające, ale także zoptymalizowane i przyszłościowe.
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">O mnie</h2>
+            <p class="text-gray-700 leading-relaxed text-justify summary-text">
+                Specjalizuję się w rozwiązywaniu złożonych problemów technicznych z wykorzystaniem najnowszych technologii webowych. Posiadam ponad 20-letnie doświadczenie w branży IT, w tym 15 lat prowadzenia własnych przedsiębiorstw, co wykształciło we mnie umiejętność strategicznego myślenia i efektywnego zarządzania projektami.
             </p>
-            <p class="text-gray-700 leading-relaxed text-justify">
-                Cechuje mnie determinacja w dążeniu do celu - gdy podejmuję się zadania, nie odpuszczam dopóki nie znajdę optymalnego rozwiązania. Te cechy, w połączeniu z moim doświadczeniem biznesowym, pozwalają mi skutecznie realizować projekty i dostarczać wartość zarówno od strony technicznej, jak i biznesowej.
+            <p class="text-gray-700 leading-relaxed text-justify mt-2 summary-text">
+                Moje kluczowe kompetencje obejmują pełny stack technologiczny z naciskiem na Angular, Node.js oraz związane z nimi ekosystemy. Wyróżnia mnie zdolność do analizy problemów z perspektywy biznesowej i technicznej, co pozwala na tworzenie rozwiązań nie tylko funkcjonalnych, ale także skalowalnych i łatwych w utrzymaniu.
             </p>
-            <p class="text-gray-700 leading-relaxed text-justify mt-4">
-                W ostatnich latach skupiłem się na programowaniu z wykorzystaniem najnowszych wersji Angulara oraz NodeJS. W życiu informatyka programisty nie ma stałej nabytej wiedzy i praca wymaga ciągłego poznawania nowych technologii i rozwiązań. Lubię uczyć się i poznawać nowe technologie.
+            <p class="text-gray-700 leading-relaxed text-justify mt-2 summary-text">
+                Cechuje mnie systematyczne podejście do rozwiązywania problemów oraz determinacja w dążeniu do optymalnych rozwiązań. Doświadczenie w zarządzaniu zespołami i projektami pozwala mi skutecznie współpracować z różnymi interesariuszami i dostarczać wartość zarówno od strony technicznej, jak i biznesowej.
             </p>
         </section>
 
@@ -99,12 +105,26 @@
 
                 <!-- Description with expand/collapse -->
                 <div id="description-0" class="description-container text-gray-700 leading-relaxed">
-                    <p>
-                        Praca jako Frontend Developer Angular dla klienta firmy Euvic. Tworzyłem i poprawiałem kod w rozbudowanej aplikacji wykorzystującej mikroserwisy frontendowe. W projekcie wykorzystywałem technologie takie jak: TypeScript, NGRX, RxJS, Angular Material, WebSockets oraz inne technologie związane z frameworkiem Angular.
-                        Testy aplikacji wykonywałem przy użyciu Jest oraz Cypress. Praca wymagała współpracy z rozbudowanym zespołem przy użyciu Azure DevOps. Całość środowiska była oparta o kontenery Docker. Nierzadko musiałem debugowac zarówno frontend jak i backend. Wiele asynchroniczny operacji i wyłapania błedów było nielada wyzwaniem. Framework PixiJS był używany do tworzenia animacji i pokazywania różnych warstw systemu.
-                        W ostatnim etapie współpracy w tym projekcie było opracowanie kompletnego grida prezentującego dynamiczne procesy biznesowe. Mimo krótkiego czasu i wielu wymagań udało nam się zakończyć projekt w terminie, zgodnie z wymaganiami klienta.
-                        Od marca 2025 pracuje samodzielnie nad backend projektu planowania przebiegu ogrodzenia. Samodzielnie i od zera budują strukturę bazy danych, tworzę API w Nest.js, które jest używane w frontendzie. System jest częścią większego projektu i udaje mi się zachować spójność z pozostałymi podsystemami.
-                    </p>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">🔧 Rozwój Frontend - Mikroserwisy Angular</h4>
+                        <p class="mb-3">
+                            Implementacja i refaktoryzacja kodu w rozbudowanej aplikacji opartej na architekturze mikroserwisów frontendowych. Wykorzystanie zaawansowanych technologii Angular: TypeScript, NGRX (state management), RxJS (reactive programming), Angular Material (UI components), WebSockets (real-time communication). Implementacja testów jednostkowych z Jest oraz testów E2E z Cypress. Debugowanie zarówno warstwy frontend jak i backend w środowisku kontenerowym Docker.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">🎨 Grafika i Animacje - PixiJS Framework</h4>
+                        <p class="mb-3">
+                            Implementacja zaawansowanych animacji i wizualizacji systemu przy użyciu frameworka PixiJS. Tworzenie interaktywnych warstw graficznych prezentujących złożone procesy biznesowe. Opracowanie kompletnego grida dynamicznego z obsługą asynchronicznych operacji i zaawansowanego error handling. Współpraca w zespole Agile przy użyciu Azure DevOps, zakończenie projektu w terminie zgodnie z wymaganiami klienta.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">🚀 Backend Development - Nest.js API</h4>
+                        <p class="mb-3">
+                            Samodzielne projektowanie i implementacja backendu dla systemu planowania przebiegu ogrodzenia. Architektura bazy danych od podstaw, implementacja RESTful API w Nest.js z wykorzystaniem TypeScript, JWT authentication, CORS policies. Integracja z istniejącymi podsystemami przy zachowaniu spójności architektonicznej. Implementacja middleware'ów, walidacji danych i obsługi błędów.
+                        </p>
+                    </div>
                 </div>
                 <button id="toggle-0" onclick="toggleDescription('description-0', 'toggle-0')" class="mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800">
                     Czytaj więcej
@@ -146,7 +166,7 @@
             <div class="bg-gray-50 p-6 rounded-lg mb-6 border border-gray-200">
                 <div class="flex justify-between items-start mb-2">
                     <div>
-                        <h3 class="text-xl font-semibold text-gray-900">Specjalista ds. IT</h3>
+                        <h3 class="text-xl font-semibold text-gray-900">CTO w firmie VoipSwitch, PM w kilku projektach</h3>
                         <p class="text-gray-600">E-SOP | Opole</p>
                     </div>
                     <span class="text-sm text-gray-500">11.2002 - 03.2018 (15 lat 5 mies.)</span>
@@ -159,12 +179,14 @@
                     <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">SQL</span>
                     <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Node.js</span>
                     <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Puppet</span>
+                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">CTO</span>
                 </div>
 
                 <!-- Description with expand/collapse -->
                 <div id="description-2" class="description-container text-gray-700 leading-relaxed">
                     <p>
-                        Prowadzenie, utrzymywanie i rozwój infrastruktury IT firmy. Moimi obowiązkami było administrowanie serwerami Linux, utrzymywanie stron internetowych oraz kont e-mail. Dodatkowo, w oparciu o dzierżawione linie telefoniczne, świadczyliśmy stały dostęp do Internetu. Praca wymagała zarządzenia grupami programistów i techników w celu zwiększenia sprzedaży. Buodwaliśmy system automatyczego deploymentu serwerów na których działała nasza autorska platforma Voip.
+                        Prowadzenie, utrzymywanie i rozwój infrastruktury IT firmy. Moimi obowiązkami było administrowanie serwerami Linux, utrzymywanie stron internetowych oraz kont e-mail. Dodatkowo, w oparciu o dzierżawione linie telefoniczne, świadczyliśmy stały dostęp do Internetu. Praca wymagała zarządzenia grupami programistów i techników w celu zwiększenia sprzedaży. Prowadziłem kilka zespołów programistów, które budowały podsystemu naszego systemu VoIP. W tym czasie jeździliśmy na targi w USA i Azji osiągając duże sukcesy.
                     </p>
                 </div>
                 <button id="toggle-2" onclick="toggleDescription('description-2', 'toggle-2')" class="mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800">
@@ -193,6 +215,7 @@
                 <div id="description-3" class="description-container text-gray-700 leading-relaxed">
                     <p>
                         W tym czasie prowadziłem oddział Netia S.A. w Opolu, który zajmował się tymi samymi usługami co poprzednia firma, czyli administrowaniem serwerami Linux, utrzymywaniem stron internetowych, kont e-mail oraz świadczeniem dostępu do Internetu.
+                        Buodwaliśmy system automatyczego deploymentu serwerów na których działała nasza autorska platforma Voip. Dużą osiągnięciem w tamtym czasie było podpięcie większości dużych firm miast Opola do Internetu. Wymagało to od naszej firmy zakupu i testowania odpowiednich urządzeń w oparciu o linie dzierżawione od operatora telekomunikacyjnego.
                     </p>
                 </div>
                 <button id="toggle-3" onclick="toggleDescription('description-3', 'toggle-3')" class="mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800">
