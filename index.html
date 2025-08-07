@@ -22,6 +22,11 @@
         
         /* Hide toggle buttons when printing */
         @media print {
+            /* Hide page title when printing */
+            title {
+                display: none !important;
+            }
+            
             button[id^="toggle-"] {
                 display: none !important;
             }
@@ -29,6 +34,33 @@
             .description-container {
                 max-height: none !important;
                 overflow: visible !important;
+            }
+            
+            /* Prevent page breaks within sections */
+            section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            /* Prevent page breaks within job/education items */
+            .bg-gray-50 {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            /* Ensure proper spacing for print */
+            body {
+                background-color: white !important;
+                color: black !important;
+            }
+            
+            /* Remove shadows and borders for cleaner print */
+            .shadow-lg, .shadow-xl {
+                box-shadow: none !important;
+            }
+            
+            .border {
+                border-color: #e5e7eb !important;
             }
         }
         
@@ -266,7 +298,7 @@
                 <div class="space-y-4">
                     <div>
                         <h4 class="font-semibold text-gray-800">Koszykówka</h4>
-                        <p class="text-gray-700">Jestem wielkim fanem koszyków. W młodości grałem w 2 lidzie i odnosiłem pewne sukcesy. Później wybrałem pracę w IT jednak gra w kosza towrzyszyła mi przez kolejne lata. Co tydzień ze sprawdzoną grupą były zawodników toczyliśmy zmagania i później w piątkowe wieczory wypijalismy wspólnie piwo. Przyjaźnie zawiązane na parkiecie przeniosły się na życie prywatne. spotkamy się wciąz regularnie z rodzinami na wspólnych wyjazdach. Kosz z racji wieku poszedł juz w odstawkę. </p>
+                        <p class="text-gray-700">Jestem wielkim fanem koszykówki. W młodości grałem w 2 lidzie i odnosiłem pewne sukcesy. Później wybrałem pracę w IT jednak gra w kosza towrzyszyła mi przez kolejne lata. Co tydzień ze sprawdzoną grupą kolegów ( byłych zawodników ) toczyliśmy zazarte zmagania i później w piątkowe wieczory wypijalismy wspólnie piwo. Przyjaźnie zawiązane na parkiecie przeniosły się na życie prywatne. Spotkamy się wciąz regularnie z rodzinami na wspólnych wyjazdach. Kosz z racji wieku poszedł juz w odstawkę. </p>
                     </div>
                     <div>
                         <h4 class="font-semibold text-gray-800">Bieganie długodystansowe</h4>
@@ -283,7 +315,7 @@
             <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">Literatura i historia</h3>
                 <p class="text-gray-700 mb-3">Fascynuje mnie zgłębianie historii, szczególnie analiza jak pojedyncze wydarzenia wpłynęły na rozwój całych społeczeństw. Lubię tez ksiąki sci-fi. Lubię samemu przewidywać mozliwe kierunki rozwoju naszej cywilizacji</p>
-                <p class="text-gray-700">Regularnie sięgam po literaturę historyczną i reportaże. Szczególnie cenię sobie prace Yuval Noah Harari'ego, których książki pozwalają spojrzeć na historię z szerszej perspektywy i dostrzec wzorce kształtujące naszą teraźniejszość.</p>
+                <p class="text-gray-700">Regularnie sięgam po literaturę historyczną i reportaże. Szczególnie cenię sobie prace Yuval Noah Harari'ego, którego książki pozwalają spojrzeć na historię z szerszej perspektywy i dostrzec wzorce kształtujące naszą teraźniejszość.</p>
             </div>
         </section>
     </div>
