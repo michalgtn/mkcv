@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Michała Kozłowskiego</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .description-container {
+            max-height: 4.5rem; /* ~3 lines of text with line-height */
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .description-container.expanded {
+            max-height: 1000px; /* A large value to allow full expansion */
+        }
+    </style>
+</head>
+<body class="p-8 md:p-12 lg:p-16">
+
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-10 lg:p-12">
+        
+        <!-- Header Section -->
+        <header class="flex flex-col md:flex-row items-center md:justify-between border-b pb-6 mb-6">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-bold text-gray-900">Michał Kozłowski</h1>
+                <p class="text-lg text-gray-600 mt-2">Programista - Web Developer</p>
+                <!-- Image section updated here -->
+                <div class="mt-4 md:mt-6">
+                    <img src="https://raw.githubusercontent.com/michalgtn/mkcv/main/IMG_4584.jpg" alt="Zdjęcie profilowe Michała Kozłowskiego" class="w-40 h-40 rounded-full object-cover object-top border-4 border-white shadow-lg mx-auto md:mx-0">
+                </div>
+            </div>
+            <div class="mt-4 md:mt-0 text-center md:text-right text-sm text-gray-500">
+                <p>E-mail: michalgtn@gmail.com</p>
+                <p>Telefon: 600 316 151</p>
+                <p>Miejscowość: Opole</p>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="mb-8">
+            <p class="text-gray-700 leading-relaxed text-justify">
+                W czasie swojej 30-letniej pracy zawodowej zajmowałem się bardzo wieloma tematami. Większość tego czasu spędziłem prowadząc własne firmy, co wiązało się z rozwiązywaniem problemów i osiąganiem zysku. W ostatnich latach skupiłem się na programowaniu z wykorzystaniem najnowszych wersji Angulara oraz NodeJS. W życiu informatyka programisty nie ma stałej nabytej wiedzy i praca wymaga ciągłego poznawania nowych technologii i rozwiązań. Lubię uczyć się i poznawać nowe technologie.
+            </p>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Doświadczenie zawodowe</h2>
+
+            <!-- Job 1 - Euvic -->
+            <div class="bg-gray-50 p-6 rounded-lg mb-6 border border-gray-200">
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">Fullstack Developer, Angular, Nest.js</h3>
+                        <p class="text-gray-600">Euvic</p>
+                    </div>
+                    <span class="text-sm text-gray-500">09.2021 - obecnie (4 lata)</span>
+                </div>
+                
+                <!-- Skills Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">Angular</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">TypeScript</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">NGRX</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">RxJS</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">Lazy Loading</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">Angular Material</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">WebSockets</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">Nest.js</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">JWT</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">CORS</span>
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2 py-1 rounded-full">REST API</span>
+                </div>
+
+                <!-- Description with expand/collapse -->
+                <div id="description-0" class="description-container text-gray-700 leading-relaxed">
+                    <p>
+                        Współpracowałem jako Frontend Developer Angular dla klienta firmy Euvic. Tworzyłem i poprawiałem kod w rozbudowanej aplikacji wykorzystującej mikroserwisy frontendowe. W projekcie wykorzystywałem technologie takie jak: TypeScript, NGRX, RxJS, Angular Material, WebSockets oraz inne technologie związane z frameworkiem Angular.
+                    </p>
+                </div>
+                <button id="toggle-0" onclick="toggleDescription('description-0', 'toggle-0')" class="mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800">
+                    Czytaj więcej
+                </button>
+            </div>
+
+            <!-- Job 2 - VoipSystems -->
+            <div class="bg-gray-50 p-6 rounded-lg mb-6 border border-gray-200">
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">Programista - Web Developer</h3>
+                        <p class="text-gray-600">VoipSystems Sp. z o.o. | Opole</p>
+                    </div>
+                    <span class="text-sm text-gray-500">03.2018 - obecnie (3 lata 6 mies.)</span>
+                </div>
+                
+                <!-- Skills Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Angular</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Node.js</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">Firebase</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">TypeScript</span>
+                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full">VoIP</span>
+                </div>
+
+                <!-- Description with expand/collapse -->
+                <div id="description-1" class="description-container text-gray-700 leading-relaxed">
+                    <p>
+                        Tworzenie oraz konserwacja systemu automatycznych rezerwacji telefonicznych. System wykorzystuje technologię VoIP, pozwala klientom na głosowe w pełni automatyczne rezerwacje telefoniczne przy użyciu chatbota. Moim zadaniem jest utrzymanie interfejsu administratora w oparciu o Angulara. Po stronie serwera utrzymywane jest API bazujące na NodeJS. Zajmuję się też tworzeniem i rozwojem aplikacji do wynajmu produktów. W tym przypadku korzystam z Firebase, Angular oraz NodeJS.
+                    </p>
+                </div>
+                <button id="toggle-1" onclick="toggleDescription('description-1', 'toggle-1')" class="mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800">
+                    Czytaj więcej
+                </button>
+            </div>
+
+            <!-- Job 3 - E-SOP -->
+            <div class="bg-gray-50 p-6 rounded-lg mb-6 border border-gray-200">
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">Specjalista ds. IT</h3>
+                        <p class="text-gray-600">E-SOP | Opole</p>
+                    </div>
+                    <span class="text-sm text-gray-500">11.2002 - 03.2018 (15 lat 5 mies.)</span>
+                </div>
+
+                <!-- Skills Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Linux</span>
+                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">MySQL</span>
+                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">SQL</span>
+                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">Node.js</span>
+                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+                </div>
+
+                <!-- Description with expand/collapse -->
+                <div id="description-2" class="description-container text-gray-700 leading-relaxed">
+                    <p>
+                        Prowadzenie, utrzymywanie i rozwój infrastruktury IT firmy. Moimi obowiązkami było administrowanie serwerami Linux, utrzymywanie stron internetowych oraz kont e-mail. Dodatkowo, w oparciu o dzierżawione linie telefoniczne, świadczyliśmy stały dostęp do Internetu.
+                    </p>
+                </div>
+                <button id="toggle-2" onclick="toggleDescription('description-2', 'toggle-2')" class="mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800">
+                    Czytaj więcej
+                </button>
+            </div>
+            
+            <!-- Job 4 - Netia -->
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">Specjalista ds. IT</h3>
+                        <p class="text-gray-600">Netia S.A. | Opole</p>
+                    </div>
+                    <span class="text-sm text-gray-500">07.2001 - 11.2002 (1 rok 4 mies.)</span>
+                </div>
+
+                <!-- Skills Tags -->
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">Linux</span>
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">Administracja Sieci</span>
+                    <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded-full">Utrzymanie Stron</span>
+                </div>
+
+                <!-- Description with expand/collapse -->
+                <div id="description-3" class="description-container text-gray-700 leading-relaxed">
+                    <p>
+                        W tym czasie prowadziłem oddział Netia S.A. w Opolu, który zajmował się tymi samymi usługami co poprzednia firma, czyli administrowaniem serwerami Linux, utrzymywaniem stron internetowych, kont e-mail oraz świadczeniem dostępu do Internetu.
+                    </p>
+                </div>
+                <button id="toggle-3" onclick="toggleDescription('description-3', 'toggle-3')" class="mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800">
+                    Czytaj więcej
+                </button>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="border-t pt-6 mt-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Wykształcenie</h2>
+            <div class="bg-gray-50 p-6 rounded-lg mb-4 border border-gray-200">
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">Uniwersytet Wrocławski</h3>
+                        <p class="text-gray-600">Kierunek: informatyka przemysłowa | Poziom: magister</p>
+                    </div>
+                    <span class="text-sm text-gray-500">10.1999 - 06.2001</span>
+                </div>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900">Politechnika Opolska</h3>
+                        <p class="text-gray-600">Kierunek: informatyka, studia inżynierskie | Poziom: inżynier</p>
+                    </div>
+                    <span class="text-sm text-gray-500">10.1996 - 06.1999</span>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <script>
+        // JavaScript for toggling the description
+        function toggleDescription(descriptionId, buttonId) {
+            const description = document.getElementById(descriptionId);
+            const button = document.getElementById(buttonId);
+
+            description.classList.toggle('expanded');
+            
+            if (description.classList.contains('expanded')) {
+                button.textContent = 'Zwiń';
+            } else {
+                button.textContent = 'Czytaj więcej';
+            }
+        }
+    </script>
+
+</body>
+</html>
