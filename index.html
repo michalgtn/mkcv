@@ -37,6 +37,18 @@
             body {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
+                margin-top: 0;
+                padding-top: 0;
+            }
+            
+            /* Add top margin for the main container when printing */
+            .max-w-4xl {
+                margin-top: 1rem !important;
+            }
+            
+            /* Hide language selector when printing */
+            .max-w-4xl.mb-4 {
+                display: none !important;
             }
             
             button[id^="toggle-"] {
