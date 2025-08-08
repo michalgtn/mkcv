@@ -51,6 +51,24 @@
                 display: none !important;
             }
             
+            /* Ensure proper spacing on all pages when printing */
+            @page :first {
+                margin-top: 2rem;
+            }
+            
+            @page :left {
+                margin-top: 2rem;
+            }
+            
+            @page :right {
+                margin-top: 2rem;
+            }
+            
+            /* Alternative approach - add padding to body for all pages */
+            body {
+                padding-top: 2rem !important;
+            }
+            
             button[id^="toggle-"] {
                 display: none !important;
             }
@@ -426,6 +444,16 @@
                 <p class="text-gray-600 lang-en" style="display: none;">English: C1</p>
                 <p class="text-gray-700 mt-2 lang-pl">W ciągu ostatnich lat pracy komunikowałem się głównie w języku angielskim, zarówno w formie pisemnej, jak i podczas licznych spotkań. Swobodnie wyrażam swoje myśli w tym języku.</p>
                 <p class="text-gray-700 mt-2 lang-en" style="display: none;">Over the past years of work, I have communicated mainly in English, both in writing and during numerous meetings. I can freely express my thoughts in this language.</p>
+            </div>
+        </section>
+
+        <!-- Courses and Training Section -->
+        <section class="border-t pt-6 mt-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-pl">Kursy i szkolenia</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-en" style="display: none;">Courses and Training</h2>
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <p class="text-gray-700 lang-pl">Treść do wypełnienia...</p>
+                <p class="text-gray-700 lang-en" style="display: none;">Content to be filled...</p>
             </div>
         </section>
 
