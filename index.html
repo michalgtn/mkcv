@@ -90,6 +90,17 @@
                 break-inside: avoid;
             }
             
+            /* Allow page breaks between major sections to prevent empty pages */
+            section.mb-8 {
+                page-break-after: auto;
+                break-after: auto;
+            }
+            
+            /* Remove excessive margins that might cause empty pages */
+            section {
+                margin-bottom: 1rem !important;
+            }
+            
             /* Ensure proper spacing for print */
             body {
                 background-color: white !important;
