@@ -78,27 +78,33 @@
                 overflow: visible !important;
             }
             
-            /* Prevent page breaks within sections */
+            /* Allow page breaks within sections to prevent gaps */
             section {
-                page-break-inside: avoid;
-                break-inside: avoid;
+                page-break-inside: auto;
+                break-inside: auto;
             }
             
-            /* Prevent page breaks within job/education items */
+            /* Allow page breaks within job/education items */
             .bg-gray-50 {
-                page-break-inside: avoid;
-                break-inside: avoid;
+                page-break-inside: auto;
+                break-inside: auto;
             }
             
-            /* Allow page breaks between major sections to prevent empty pages */
+            /* Remove page break restrictions that cause gaps */
             section.mb-8 {
                 page-break-after: auto;
                 break-after: auto;
             }
             
-            /* Remove excessive margins that might cause empty pages */
+            /* Reduce margins to prevent gaps */
             section {
-                margin-bottom: 1rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            /* Ensure work experience section flows naturally */
+            section.mb-8:first-of-type {
+                page-break-after: avoid;
+                break-after: avoid;
             }
             
             /* Ensure proper spacing for print */
