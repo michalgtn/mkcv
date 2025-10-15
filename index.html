@@ -455,7 +455,31 @@
         </section>
 
         <!-- Languages Section -->
-        <section class="border-t pt-6 mt-6">
+        <style>
+            @media print {
+                .languages-section {
+                    page-break-before: always;
+                }
+            }
+            
+            /* Smaller fonts for interests section */
+            .interests-section {
+                font-size: 0.9rem;
+            }
+            
+            .interests-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .interests-section h3 {
+                font-size: 1.1rem;
+            }
+            
+            .interests-section h4 {
+                font-size: 1rem;
+            }
+        </style>
+        <section class="border-t pt-6 mt-6 languages-section">
             <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-pl">Języki</h2>
             <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-en" style="display: none;">Languages</h2>
             <div class="bg-gray-50 p-6 rounded-lg mb-4 border border-gray-200">
@@ -480,7 +504,7 @@
         </section>
 
         <!-- Interests Section -->
-        <section class="border-t pt-6 mt-6">
+        <section class="border-t pt-6 mt-6 interests-section">
             <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-pl">Zainteresowania</h2>
             <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-en" style="display: none;">Interests</h2>
             
@@ -511,14 +535,14 @@
             </div>
 
             <!-- Intellectual Interests -->
-            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <!-- <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
                 <h3 class="text-xl font-semibold text-gray-900 mb-3 lang-pl">Literatura i historia</h3>
                 <h3 class="text-xl font-semibold text-gray-900 mb-3 lang-en" style="display: none;">Literature and History</h3>
                 <p class="text-gray-700 mb-3 lang-pl">Fascynuje mnie zgłębianie historii, szczególnie analiza jak pojedyncze wydarzenia wpłynęły na rozwój całych społeczeństw. Lubię tez ksiąki sci-fi. Lubię samemu przewidywać mozliwe kierunki rozwoju naszej cywilizacji</p>
                 <p class="text-gray-700 mb-3 lang-en" style="display: none;">I am fascinated by delving into history, especially analyzing how single events influenced the development of entire societies. I also like sci-fi books. I like to predict possible directions of development of our civilization myself.</p>
                 <p class="text-gray-700 lang-pl">Regularnie sięgam po literaturę historyczną i reportaże. Szczególnie cenię sobie prace Yuval Noah Harari'ego, którego książki pozwalają spojrzeć na historię z szerszej perspektywy i dostrzec wzorce kształtujące naszą teraźniejszość.</p>
                 <p class="text-gray-700 lang-en" style="display: none;">I regularly reach for historical literature and reportages. I particularly value the works of Yuval Noah Harari, whose books allow us to look at history from a broader perspective and see patterns shaping our present.</p>
-            </div>
+            </div> -->
         </section>
 
         <!-- About Me Section -->
@@ -544,9 +568,63 @@
                 I am characterized by a systematic approach to problem-solving and determination in pursuing optimal solutions. Experience in managing teams and projects allows me to effectively collaborate with various stakeholders and deliver value from both technical and business perspectives.
             </p>
         </section>
+
+        <!-- Consent Section -->
+        <section class="border-t pt-6 mt-6 consent-section">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-pl">Zgoda na przetwarzanie danych osobowych</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 lang-en" style="display: none;">Personal Data Processing Consent</h2>
+            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <p class="text-gray-700 leading-relaxed text-justify lang-pl">
+                    Niniejszym wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w złożonych przeze mnie dokumentach aplikacyjnych w związku z procesem rekrutacji prowadzonym przez <span class="company-name-pl"></span>.
+                </p>
+                <p class="text-gray-700 leading-relaxed text-justify mt-3 lang-pl">
+                    Zgoda obejmuje także przyszłe procesy rekrutacyjne uruchomione w ciągu 2 lat od dnia złożenia przeze mnie dokumentów aplikacyjnych.
+                </p>
+                <p class="text-gray-700 leading-relaxed text-justify lang-en" style="display: none;">
+                    I hereby consent to the processing of my personal data contained in the application documents submitted by me in connection with the recruitment process conducted by <span class="company-name-en"></span>.
+                </p>
+                <p class="text-gray-700 leading-relaxed text-justify mt-3 lang-en" style="display: none;">
+                    This consent also covers future recruitment processes initiated within 2 years from the date of submission of my application documents.
+                </p>
+            </div>
+        </section>
     </div>
 
     <script>
+        // Company configuration - modify these values to change company details
+        const COMPANY_CONFIG = {
+            name: '',
+            address: 'Warszawa (01-570) przy ul. Władysława Niegolewskiego 17 lok. 1',
+            fullAddress: 'apreel Sp. z o.o. z siedzibą w Warszawie (01-570) przy ul. Władysława Niegolewskiego 17 lok. 1'
+        };
+
+        // Function to update company details in consent section
+        function updateCompanyDetails() {
+            const plElements = document.querySelectorAll('.company-name-pl');
+            const enElements = document.querySelectorAll('.company-name-en');
+            const plAddressElements = document.querySelectorAll('.company-address-pl');
+            const enAddressElements = document.querySelectorAll('.company-address-en');
+            const consentSection = document.querySelector('.consent-section');
+            
+            // Check if company name is set
+            if (COMPANY_CONFIG.name && COMPANY_CONFIG.name.trim() !== '') {
+                plElements.forEach(el => el.textContent = COMPANY_CONFIG.fullAddress);
+                enElements.forEach(el => el.textContent = COMPANY_CONFIG.fullAddress);
+                plAddressElements.forEach(el => el.textContent = COMPANY_CONFIG.address);
+                enAddressElements.forEach(el => el.textContent = COMPANY_CONFIG.address);
+                
+                // Show consent section
+                if (consentSection) {
+                    consentSection.style.display = 'block';
+                }
+            } else {
+                // Hide consent section if no company name
+                if (consentSection) {
+                    consentSection.style.display = 'none';
+                }
+            }
+        }
+
         // JavaScript for toggling the description
         function toggleDescription(descriptionId, buttonId) {
             const description = document.getElementById(descriptionId);
@@ -564,6 +642,9 @@
 
         // Language switching functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize company details
+            updateCompanyDetails();
+            
             const langButtons = document.querySelectorAll('.lang-btn');
             
             langButtons.forEach(button => {
